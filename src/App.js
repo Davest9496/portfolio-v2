@@ -8,14 +8,15 @@ import { Contact } from "./components/Contact";
 export function App() {
   return (
     <div className="container">
-      <div className="container-left"></div>
+      <div className="container-left">
+        <Info />
+      </div>
       <div className="container-right">
         <Article />
         <Projects />
         <Contact />
         <Footer />
       </div>
-      <Info />
     </div>
   );
 }

@@ -31,7 +31,7 @@ body {
 }
 
 .container-left {
-  width: 50%;
+  flex-basis: 50%;
 }
 
 .container-right {
@@ -40,13 +40,11 @@ body {
 }
 
 .info {
-  top: 0;
-  left: 0;
   height: 100vw;
   width: 50%;
   position: fixed;
-  padding: 10%;
-  padding-left: 15%;
+  /* padding: 10% 10% 10% 15%; */
+  padding-right: 20%;
 }
 
 h1 {
@@ -74,7 +72,7 @@ h3 {
 p {
   font-size: 100%;
   font-weight: 300;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   line-height: 1.7;
 }
 
@@ -131,7 +129,7 @@ nav {
 
 .social{
   font-size: 200%;
-  margin-top: 52%;
+  margin-top: 52px;
 }
 
 .social-links {
@@ -140,6 +138,12 @@ nav {
 
 .social-links:hover {
  color: #fff;
+}
+
+.hide {
+  display: none;
+  /* opacity: 0; */
+  background-color: #fff;
 }
 
 .project {
@@ -164,6 +168,7 @@ nav {
 
 .project-img {
   margin-right: 10px;
+  margin-bottom: 10px;
   flex-basis: 30%;
   width: 100%;
 }
@@ -193,6 +198,17 @@ figure {
   margin-bottom: 0;
 }
 
+.project-desc {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.project-info {
+  font-size: 95%;
+  margin-top: 0;
+}
+
 .title-icon {
   font-size: 70%;
   margin-left: 5px;
@@ -201,7 +217,7 @@ figure {
 .tools {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -15px;
+  margin-top: 5px;
 }
 
 .tools-item {
@@ -226,6 +242,73 @@ figure {
 }
 
 
+ /* MEDIA QUERY MANAGER
+
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop */
+
+@media (max-width: 350px) {}
+
+@media (max-width: 600px) {
+ 
+
+}
+
+@media (max-width: 1024px) {
+   .project-box {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+  }
+
+   .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-right {
+  width: 100%;
+  padding-right: 0;
+}
+
+.container-left{
+  flex-basis: 1;
+  /* height: auto;
+  min-height: 100%; */
+}
+
+  .info {
+  height: fit-content;
+  padding: 0;
+  width: 100%;
+  position: static;
+}
+
+.social {
+  margin-bottom: 50px;
+}
+
+  nav {
+  display: none;
+}
+
+body {
+  padding: 3%;
+}
+
+footer {
+  text-align: center;
+}
+}
+@media (max-width: 1200px) {
+  .project-box {
+    opacity: 1;
+  }
+}
+/* @media (min-width: 1800px) {} */
 
 
 

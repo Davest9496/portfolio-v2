@@ -1,3 +1,4 @@
+
 export function Contact() {
   return (
     <div>
@@ -13,3 +14,4 @@ export function Contact() {
     </div>
   );
 }
+

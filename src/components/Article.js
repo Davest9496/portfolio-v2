@@ -7,6 +7,7 @@ export function Article() {
         make a type specimen book. It has survived not only five centuries, but
         also leap into electronic typesetting, remaining essentially unchanged.
       </p>
+      <br />
       <p>
         Many desktop publishing packages and web page editors now use Lorem
         Ipsum as their default model text, and a search for 'lorem ipsum' will
@@ -17,6 +18,7 @@ export function Article() {
         piece of classical Latin literature from 45 BC, making it over 2000
         years old.
       </p>
+      <br />
     </article>
   );
 }

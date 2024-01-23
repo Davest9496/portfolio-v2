@@ -16,11 +16,14 @@ export function Projects() {
       tools: ["React", "Node.js"],
     },
     {
-      title: "project name",
-      desc: "lorem ipsium",
-      image: <img src="/profile.jpeg" className="image" alt="project name" />,
-      tools: ["React", "Node.js"],
-    }
+      title: "Cravings",
+      desc: "Restaurant Website",
+      info: `Ipsum as their default model text, and a search for 'lorem ipsum' will
+        uncover many web sites still in their infancy. Various versions have
+        evolved over the years, sometimes by accident,`,
+      image: <img src="/cravings.png" className="image" alt="project name" />,
+      tools: ["React", "Node.js", "SaSS"],
+    },
   ];
 
   return (
@@ -46,6 +49,7 @@ export function ProjectItems({ items }) {
           </span>
         </h3>
         <p className="project-desc">{items.desc}</p>
+        <p className="project-info">{items.info}</p>
         <div className="tools">
           {items.tools.map((tool) => (
             <ToolsItem toolItems={tool} />
