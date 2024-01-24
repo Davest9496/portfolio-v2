@@ -1,9 +1,10 @@
 import "./styles.css";
 import { Info } from "./components/Info";
 import { Footer } from "./components/Footer";
-import { Article } from "./components/Article";
+import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
+import { Education } from "./components/Education";
 
 export function App() {
   return (
@@ -12,7 +13,8 @@ export function App() {
         <Info />
       </div>
       <div className="container-right">
-        <Article />
+        <About />
+        <Education/>
         <Projects />
         <Contact />
         <Footer />

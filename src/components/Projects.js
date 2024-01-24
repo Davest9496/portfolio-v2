@@ -1,5 +1,6 @@
 import { ToolsItem } from "./ToolsItem";
 import { FaLink } from "react-icons/fa";
+import { MdArrowOutward } from "react-icons/md";
 
 export function Projects() {
   const project = [
@@ -27,10 +28,14 @@ export function Projects() {
   ];
 
   return (
-    <ul className="project">
+    <ul className="project" id="projects">
+      <h2 className="secondary-header">projects</h2>
       {project.map((item, id) => (
         <ProjectItems items={item} key={id} />
       ))}
+      <h3 className="text-highlight">
+        View project archive <MdArrowOutward />
+      </h3>
     </ul>
   );
 }
@@ -48,7 +53,7 @@ export function ProjectItems({ items }) {
             <FaLink />
           </span>
         </h3>
-        <p className="project-desc">{items.desc}</p>
+        <p className="text-highlight">{items.desc}</p>
         <p className="project-info">{items.info}</p>
         <div className="tools">
           {items.tools.map((tool) => (

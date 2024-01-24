@@ -1,8 +1,8 @@
 
 export function Contact() {
   return (
-    <div>
-      <h3>Contact Me</h3>
+    <div id="contact" className="contact">
+      <h2 className="secondary-header">contact me</h2>
       <p>
         Where can I get some? There are many variations of passages of Lorem
         Ipsum available, but the majority have suffered alteration in some form,

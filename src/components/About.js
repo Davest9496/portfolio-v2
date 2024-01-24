@@ -1,6 +1,9 @@
-export function Article() {
+import { MdArrowOutward } from "react-icons/md";
+
+export function About() {
   return (
-    <article>
+    <article id="about">
+      <h2 className="secondary-header">about</h2>
       <p>
         Lorem Ipsum has been the industry's standard dummy text ever since the
         1500s, when an unknown printer took a galley of type and scrambled it to
@@ -19,6 +22,10 @@ export function Article() {
         years old.
       </p>
       <br />
+      <h3 className="text-highlight">
+        View resume here <MdArrowOutward />
+      </h3>
     </article>
   );
 }
+
