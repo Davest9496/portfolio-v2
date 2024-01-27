@@ -5,7 +5,9 @@ export function Footer() {
   return (
     <footer>
       <p className="footer">
-      <Social className="footer-icons"/>
+        <div className="footer-icons">
+          <Social />
+        </div>
         Revised portfolio website built with react and Sass by yours truly Dave
         Ejezie. <br />{" "}
         <span className="copyright">

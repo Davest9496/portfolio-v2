@@ -26,29 +26,28 @@ body {
   );
   font-family: "Montserrat", sans-serif;
   color: #b6bbc4;
-  padding: 5% 10%;
+  width: 100vw;
+  padding: 5% 20%;
   margin: 0;
   transition: background 0.1s;
 }
-
-/* body {
- 
-} */
 
 /* container styling */
 .container {
   display: flex;
   width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .container-left {
-  height: 100vh;
-  flex-basis: 50%;
+  position: relative;
+  height: auto;
+  width: 50%;
 }
 
 .container-right {
   width: 50%;
-  padding-right: 5%;
 }
 
 /* Info */
@@ -56,19 +55,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 82%;
-  /* height: 600px; */
-  width: 50%;
+  height: 100vh;
+  width: 30%;
+  padding: 5% 0;
   position: fixed;
-  padding-right: 20%;
+  top: 0
 }
 
-.info-text {
-  min-height: fit-content;
+.info-statement {
+  width: 60%;
 }
 
 .info-links {
   height: auto;
+  width: 50%;
 }
 
 /* Element styles */
@@ -110,7 +110,9 @@ a {
 
 /* Nav */
 nav {
+  position: relative;
   margin-top: 50px;
+  width: 50%;
 }
 
 .nav-item {
@@ -153,7 +155,7 @@ nav {
 /* Social */
 .social {
   font-size: 200%;
-  margin-top: 52px;
+  display: block;
 }
 
 .social-links {
@@ -167,7 +169,6 @@ nav {
 /* Education */
 .education {
   height: 600px;
-  /* background-color: orangered; */
 }
 
 /* Projects */
@@ -249,16 +250,98 @@ figure {
 
 /* Contact */
 .contact {
-  height: 600px;
-  /* background: red; */
+  height: fit-content;
+}
+
+/* Contact Form */
+.form {
+  margin-top: 50px;
+  padding: 5%;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px #0c0c0c1a;
+  border: 2px solid #b6bbc4;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.text-input {
+  min-height: 250px;
+}
+
+.form-input {
+  text-transform: capitalize;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background-color: rgba(#b6bbc4, 0.7);
+  border: none;
+  font-family: inherit;
+  color: #999;
+  width: 100%;
+  border-bottom: 3px solid transparent;
+  display: block;
+  transition: all 0.3s;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: rgba(12, 12, 12, 0.8);
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 10px 20px rgba(12, 12, 12, 0.1);
+  border-bottom: 3px solid rgb(14, 201, 173);
+}
+
+.form-input:focus:invalid {
+  border-bottom: 3px solid orangered;
+}
+
+.form-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-top: 7px;
+  text-transform: capitalize;
+  transition: all 0.3s;
+}
+
+.form-input:placeholder-shown + .form-label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-40px);
+}
+
+/* Button Send */
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #101720;
+  font-weight: 900;
+  font-size: 120%;
+  border-radius: 50px;
+  border: none;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  /* box-shadow: 0 10px 20px rgba(#fff, 0.2); */
+  cursor: pointer;
 }
 
 /* Footer */
 .footer {
   font-weight: 100;
   font-size: 80%;
-  margin-top: 50px;
   opacity: 0.5;
+}
+
+.footer-icons {
+  display: none;
 }
 
 .copyright {
@@ -303,8 +386,13 @@ figure {
 }
 
 /* MEDIA QUERY MANAGER */
+@media (max-width: 600px) {
+  .text-input {
+    min-height: 150px;
+  }
+}
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .project-box {
     display: flex;
     flex-direction: column-reverse;
@@ -318,23 +406,24 @@ figure {
 
   .container-right {
     width: 100%;
-    padding-right: 0;
   }
 
   .info {
     height: fit-content;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     position: static;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
+  }
+
+  .info-statement {
+    width: 100%;
+    margin-bottom: 50px;
+    padding-right: 5%;
   }
 
   .secondary-header {
     display: block;
-  }
-
-  .social {
-    margin-bottom: 50px;
   }
 
   nav {
@@ -345,10 +434,20 @@ figure {
     padding: 10% 3%;
   }
 
+  .form {
+    padding: 3%;
+  }
+
   footer {
     text-align: center;
   }
+
+  .footer-icons {
+    display: none;
+    margin-bottom: 20px;
+  }
 }
+
 @media (max-width: 1200px) {
   .project-box {
     opacity: 1;
@@ -359,12 +458,10 @@ figure {
   }
 
   .footer-icons {
-    display: inline-block;
-  }
-}
-
-@media (min-width: 1200px) {
-  .footer-icons {
     display: block;
+  }
+
+  .info-links {
+    width: 100%;
   }
 }

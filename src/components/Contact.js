@@ -1,3 +1,4 @@
+import Forms from "./Forms";
 
 export function Contact() {
   return (
@@ -11,6 +12,7 @@ export function Contact() {
         to be sure there isn't anything embarrassing hidden in the middle of
         text. em ipsum dolor sit amet...'
       </p>
+      <Forms/>
     </div>
   );
 }
