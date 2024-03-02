@@ -50,6 +50,10 @@ body {
   width: 50%;
 }
 
+.container-right > section:not(:last-child) {
+  margin-bottom: 100px;
+}
+
 /* Info */
 .info {
   display: flex;
@@ -59,7 +63,7 @@ body {
   width: 30%;
   padding: 5% 0;
   position: fixed;
-  top: 0
+  top: 0;
 }
 
 .info-statement {
@@ -98,6 +102,8 @@ p {
   font-size: 100%;
   font-weight: 300;
   line-height: 1.7;
+  margin-bottom: 20px;
+  word-spacing: 2px;
 }
 
 li,
@@ -116,7 +122,7 @@ nav {
 }
 
 .nav-item {
-  display: inline-block;
+  display: block;
   position: relative;
   margin-bottom: 20px;
 }
@@ -267,7 +273,7 @@ figure {
 }
 
 .text-input {
-  min-height: 250px;
+  min-height: 150px;
 }
 
 .form-input {
@@ -345,8 +351,10 @@ figure {
 }
 
 .copyright {
+  display: block;
   font-size: 100%;
   font-weight: 500;
+  margin-top: 10px;
 }
 
 /* UTILITY CLASSES */
@@ -359,6 +367,20 @@ figure {
   font-weight: 500;
   margin-bottom: 5px;
   color: #fff;
+}
+
+.text-highlight:hover {
+  color: rgb(14, 201, 173);
+  cursor: pointer;
+}
+
+.text-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.text-highlight:hover .text-icon {
+  color: #fff;
+  transform: translateX(100px);
 }
 
 .active {
@@ -375,14 +397,6 @@ figure {
     background-color: #fff;
     transition: 0.2s;
   }
-}
-
-/* Section Margin */
-#about,
-#education,
-#projects,
-#contact {
-  margin-bottom: 150px;
 }
 
 /* MEDIA QUERY MANAGER */

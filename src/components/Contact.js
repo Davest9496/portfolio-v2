@@ -2,18 +2,14 @@ import Forms from "./Forms";
 
 export function Contact() {
   return (
-    <div id="contact" className="contact">
-      <h2 className="secondary-header">contact me</h2>
+    <section id="contact" className="contact">
+      <h2 className="secondary-header">Contact Me</h2>
       <p>
-        Where can I get some? There are many variations of passages of Lorem
-        Ipsum available, but the majority have suffered alteration in some form,
-        by injected humour, or randomised words which don't look even slightly
-        believable. If you are going to use a passage of Lorem Ipsum, you need
-        to be sure there isn't anything embarrassing hidden in the middle of
-        text. em ipsum dolor sit amet...'
+        If you're interested in working together or have any questions, feel
+        free to reach out. I'm always open to researching new ideas and
+        collaborations, or just a chat about tech over a cup of coffee.
       </p>
-      <Forms/>
-    </div>
+      <Forms />
+    </section>
   );
 }
-

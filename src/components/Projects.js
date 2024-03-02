@@ -10,39 +10,30 @@ export function Projects() {
       info: `Ipsum as their default model text, and a search for 'lorem ipsum' will
         uncover many web sites still in their infancy. Various versions have
         evolved over the years, sometimes by accident,`,
-      image: <img src="/cravings.png" className="image" alt="project name" />,
-      tools: ["React", "Node.js", "SaSS"],
+      image: (
+        <img
+          src="/cravings.png"
+          className="image"
+          alt="Cravings Restaurant Website"
+        />
+      ),
+      tools: ["HTML", "SASS"],
     },
-    {
-      title: "Cravings",
-      desc: "Restaurant Website",
-      info: `Ipsum as their default model text, and a search for 'lorem ipsum' will
-        uncover many web sites still in their infancy. Various versions have
-        evolved over the years, sometimes by accident,`,
-      image: <img src="/cravings.png" className="image" alt="project name" />,
-      tools: ["React", "Node.js", "SaSS"],
-    },
-    {
-      title: "Cravings",
-      desc: "Restaurant Website",
-      info: `Ipsum as their default model text, and a search for 'lorem ipsum' will
-        uncover many web sites still in their infancy. Various versions have
-        evolved over the years, sometimes by accident,`,
-      image: <img src="/cravings.png" className="image" alt="project name" />,
-      tools: ["React", "Node.js", "SaSS"],
-    },
+    // ... other unique projects
   ];
 
   return (
-    <ul className="project" id="projects">
-      <h2 className="secondary-header">projects</h2>
-      {project.map((item, id) => (
-        <ProjectItems items={item} key={id} />
-      ))}
-      <h3 className="text-highlight">
-        View project archive <MdArrowOutward />
-      </h3>
-    </ul>
+    <section id="projects">
+      <ul className="project">
+        <h2 className="secondary-header">Projects</h2>
+        {project.map((item, id) => (
+          <ProjectItems items={item} key={id} />
+        ))}
+        <h3 className="text-highlight">
+          View project archive <MdArrowOutward />
+        </h3>
+      </ul>
+    </section>
   );
 }
 
@@ -62,8 +53,8 @@ export function ProjectItems({ items }) {
         <p className="text-highlight">{items.desc}</p>
         <p className="project-info">{items.info}</p>
         <div className="tools">
-          {items.tools.map((tool) => (
-            <ToolsItem toolItems={tool} />
+          {items.tools.map((tool, index) => (
+            <ToolsItem toolItems={tool} key={index} />
           ))}
         </div>
       </div>

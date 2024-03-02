@@ -14,6 +14,7 @@ export function Social() {
         href="https://github.com/Davest9496"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="GitHub Profile"
       >
         <FaGithubSquare />
       </a>
@@ -22,6 +23,7 @@ export function Social() {
         href="https://www.linkedin.com/in/dave-ejezie-896798b9/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="LinkedIn Profile"
       >
         <FaLinkedin />
       </a>
@@ -30,6 +32,7 @@ export function Social() {
         href="https://twitter.com/DuEjezie"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Twitter Profile"
       >
         <FaTwitter />
       </a>
@@ -38,6 +41,7 @@ export function Social() {
         href="https://www.instagram.com/duejezie/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Instagram Profile"
       >
         <FaInstagram />
       </a>
@@ -46,6 +50,7 @@ export function Social() {
         href="https://www.credly.com/users/dave-ejezie/badges#"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Credly Profile"
       >
         <SiCredly />
       </a>

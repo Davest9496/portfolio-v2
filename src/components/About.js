@@ -2,30 +2,32 @@ import { MdArrowOutward } from "react-icons/md";
 
 export function About() {
   return (
-    <article id="about">
-      <h2 className="secondary-header">about</h2>
+    <section id="about">
+      <h2 className="secondary-header">About Me</h2>
       <p>
-        Lorem Ipsum has been the industry's standard dummy text ever since the
-        1500s, when an unknown printer took a galley of type and scrambled it to
-        make a type specimen book. It has survived not only five centuries, but
-        also leap into electronic typesetting, remaining essentially unchanged.
+        I am a passionate web developer with experience in creating responsive
+        and user-friendly web applications. I specialize in React and have a
+        deep understanding of modern web development practices.
       </p>
-      <br />
       <p>
-        Many desktop publishing packages and web page editors now use Lorem
-        Ipsum as their default model text, and a search for 'lorem ipsum' will
-        uncover many web sites still in their infancy. Various versions have
-        evolved over the years, sometimes by accident, sometimes on purpose
-        (injected humour and the like). Where does it come from? Contrary to
-        popular belief, Lorem Ipsum is not simply random text. It has roots in a
-        piece of classical Latin literature from 45 BC, making it over 2000
-        years old.
+        My journey in web development started with an online course in UI/UX
+        where i came in contact with basics of HTML and CSS, and I have since
+        expanded my skills to include JavaScript, React, Node.js and more. I am
+        always eager to learn new technologies and improve my craft.
       </p>
-      <br />
-      <h3 className="text-highlight">
-        View resume here <MdArrowOutward />
-      </h3>
-    </article>
+      <p>
+        When I'm not coding, you can find me reading
+        about the latest and exciting tech trends, studying 
+        online to develop or acquire more soft skills, 
+        or spending time with family.
+      </p>
+      <a
+        href="/resume.pdf"
+        className="text-highlight"
+        aria-label="View my resume"
+      >
+        View my resume <MdArrowOutward />
+      </a>
+    </section>
   );
 }
-

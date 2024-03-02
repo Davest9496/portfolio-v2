@@ -6,10 +6,9 @@ export function Info() {
     <div className="info">
       <div className="info-text">
         <h1>Dave Ejezie</h1>
-        <h2>software developer</h2>
+        <h2>Software Developer</h2>
         <p className="info-statement">
-          Building AI powered softwares to enable businesses maximise resources
-          and improved productivity.
+          Building software solutions to empower businesses.
         </p>
         <Nav />
       </div>

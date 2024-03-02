@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Forms() {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Implement form submission logic here
+    alert("Form submitted successfully!");
+  };
+
   return (
     <div className="form">
       {/* fullname */}
@@ -9,10 +25,13 @@ export default function Forms() {
           type="text"
           className="form-input"
           id="name"
+          name="name"
           placeholder="Full name"
+          value={formState.name}
+          onChange={handleChange}
           required
         />
-        <label for="name" className="form-label">
+        <label htmlFor="name" className="form-label">
           Full name
         </label>
       </div>
@@ -22,10 +41,13 @@ export default function Forms() {
           type="email"
           className="form-input"
           id="email"
+          name="email"
           placeholder="Email address"
+          value={formState.email}
+          onChange={handleChange}
           required
         />
-        <label for="email" className="form-label">
+        <label htmlFor="email" className="form-label">
           Email address
         </label>
       </div>
@@ -34,7 +56,10 @@ export default function Forms() {
         <textarea
           className="form-input text-input"
           id="message"
+          name="message"
           placeholder="Enter message here"
+          value={formState.message}
+          onChange={handleChange}
           required
         />
         <label htmlFor="message" className="form-label">
@@ -42,7 +67,9 @@ export default function Forms() {
         </label>
       </div>
       {/* button */}
-      <button class="btn">send</button>
+      <button type="submit" className="btn" onClick={handleSubmit}>
+        Send
+      </button>
     </div>
   );
 }

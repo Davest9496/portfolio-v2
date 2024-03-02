@@ -5,26 +5,32 @@ import { Footer } from "./components/Footer";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
-import { Education } from "./components/Education";
+// import { Education } from "./components/Education";
 
-function App() {
+// Custom hook for the light effect
+function useLightEffect() {
+  const [mousePosition, setMousePosition] = React.useState({ x: window.innerWidth /  2, y: window.innerHeight /  2 });
+
   useEffect(() => {
-    // Set initial position of the light effect to the center of the viewport
-    document.body.style.setProperty("--x", `${window.innerWidth / 2}px`);
-    document.body.style.setProperty("--y", `${window.innerHeight / 2}px`);
-
     const updateBackground = (e) => {
-      document.body.style.setProperty("--x", `${e.pageX - 10}px`);
-      document.body.style.setProperty("--y", `${e.pageY - 10}px`);
+      setMousePosition({ x: e.pageX -  10, y: e.pageY -  10 });
     };
 
     document.addEventListener("mousemove", updateBackground);
 
-    // Clean up the event listener on unmount
     return () => {
       document.removeEventListener("mousemove", updateBackground);
     };
   }, []);
+
+  useEffect(() => {
+    document.body.style.setProperty("--x", `${mousePosition.x}px`);
+    document.body.style.setProperty("--y", `${mousePosition.y}px`);
+  }, [mousePosition]);
+}
+
+function App() {
+  useLightEffect();
 
   return (
     <div className="container">
@@ -33,7 +39,7 @@ function App() {
       </div>
       <div className="container-right">
         <About />
-        <Education />
+        {/* <Education /> */}
         <Projects />
         <Contact />
         <Footer />
