@@ -1,15 +1,41 @@
+import React from "react";
 import { ToolsItem } from "./ToolsItem";
 import { FaLink } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
+import { PiFolderSimple } from "react-icons/pi";
 
-export function Projects() {
+const Projects = () => {
   const project = [
+    {
+      title: "Weather App",
+      desc: "8 Days Weather Forecast",
+      info: `about the weather app...`,
+      image: (
+        <img
+          src="/weather.png"
+          className="image"
+          alt="8 Days Weather Forecast"
+        />
+      ),
+      tools: ["Python", "Flask", "JavaScript", "CSS"],
+    },
+    {
+      title: "Mean Cal",
+      desc: "A Mean Calculator",
+      info: `about the meaan calculator app...`,
+      image: (
+        <img
+          src="/mean.png"
+          className="image"
+          alt="8 Days Weather Forecast"
+        />
+      ),
+      tools: ["Python", "Flask", "JavaScript", "CSS"],
+    },
     {
       title: "Cravings",
       desc: "Restaurant Website",
-      info: `Ipsum as their default model text, and a search for 'lorem ipsum' will
-        uncover many web sites still in their infancy. Various versions have
-        evolved over the years, sometimes by accident,`,
+      info: `Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident,`,
       image: (
         <img
           src="/cravings.png"
@@ -19,13 +45,17 @@ export function Projects() {
       ),
       tools: ["HTML", "SASS"],
     },
-    // ... other unique projects
   ];
 
   return (
     <section id="projects">
       <ul className="project">
-        <h2 className="secondary-header">Projects</h2>
+        <h2 className="title">
+          <span className="span-icon">
+            <PiFolderSimple />
+          </span>
+          Projects
+        </h2>
         {project.map((item, id) => (
           <ProjectItems items={item} key={id} />
         ))}
@@ -35,29 +65,33 @@ export function Projects() {
       </ul>
     </section>
   );
-}
+};
 
-export function ProjectItems({ items }) {
+const ProjectItems = React.memo(function ProjectItems({ items }) {
+  const { title, desc, info, image, tools } = items;
+
   return (
     <li className="project-box">
       <div className="project-img">
-        <figure>{items.image}</figure>
+        <figure>{image}</figure>
       </div>
       <div className="project-info">
         <h3 className="project-title">
-          {items.title}
+          {title}
           <span className="title-icon">
             <FaLink />
           </span>
         </h3>
-        <p className="text-highlight">{items.desc}</p>
-        <p className="project-info">{items.info}</p>
+        <p className="text-highlight">{desc}</p>
+        <p className="project-info">{info}</p>
         <div className="tools">
-          {items.tools.map((tool, index) => (
+          {tools.map((tool, index) => (
             <ToolsItem toolItems={tool} key={index} />
           ))}
         </div>
       </div>
     </li>
   );
-}
+});
+
+export { Projects };
