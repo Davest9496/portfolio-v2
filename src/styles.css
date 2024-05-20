@@ -289,6 +289,7 @@ nav {
   word-spacing: 10px;
   letter-spacing: 5px;
   word-wrap: none;
+  text-align: center;
 }
 
 #about {
@@ -535,8 +536,8 @@ footer {
 /* MEDIA QUERY MANAGER */
 /* Media queries for different screen sizes */
 @media screen and (max-width: 1200px) {
-    h2 {
-        font-size: 1.8em;
+    .hero-heading {
+        font-size: 3.6em;
     }
 }
 
@@ -545,9 +546,6 @@ footer {
     padding: 0;
     background-color: #fff;
   }
-    h2 {
-        font-size: 1.6em;
-    }
 
      .mask {
       display: none;
@@ -580,6 +578,7 @@ footer {
 
     .hero-heading {
       text-align: center;
+      font-size: 3.2em;
     }
 
     #hero, #about, #info, #projects, #education, #contact {
@@ -601,14 +600,14 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    h2 {
-        font-size: 1.4em;
+    .hero-heading {
+        font-size: 2.2em;
     }
 }
 
 @media screen and (max-width: 576px) {
-    h2 {
-        font-size: .5em;
+    .hero-heading {
+        font-size: 1.6em;
     }
 
    
