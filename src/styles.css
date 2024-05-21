@@ -665,11 +665,6 @@ footer {
     left: 15%;
     transform: translate(-50% -50%);
   }
-
-   .info {
-    padding: 10px 20px 10px 5px;
-    height: 60px;
-  }
 }
 
 @media screen and (max-width: 380px) {
