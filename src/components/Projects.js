@@ -8,7 +8,6 @@ const Projects = () => {
   const project = [
     {
       title: "Weather App",
-      desc: "8 Days Weather Forecast",
       info: `about the weather app...`,
       image: (
         <img
@@ -21,7 +20,6 @@ const Projects = () => {
     },
     {
       title: "Mean Cal",
-      desc: "A Mean Calculator",
       info: `about the meaan calculator app...`,
       image: (
         <img
@@ -34,7 +32,6 @@ const Projects = () => {
     },
     {
       title: "Cravings",
-      desc: "Restaurant Website",
       info: `Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident,`,
       image: (
         <img
@@ -59,16 +56,16 @@ const Projects = () => {
         {project.map((item, id) => (
           <ProjectItems items={item} key={id} />
         ))}
+      </ul>
         <h3 className="text-highlight">
           View project archive <MdArrowOutward />
         </h3>
-      </ul>
     </section>
   );
 };
 
 const ProjectItems = React.memo(function ProjectItems({ items }) {
-  const { title, desc, info, image, tools } = items;
+  const { title, info, image, tools } = items;
 
   return (
     <li className="project-box">
@@ -82,7 +79,6 @@ const ProjectItems = React.memo(function ProjectItems({ items }) {
             <FaLink />
           </span>
         </h3>
-        <p className="text-highlight">{desc}</p>
         <p className="project-info">{info}</p>
         <div className="tools">
           {tools.map((tool, index) => (
