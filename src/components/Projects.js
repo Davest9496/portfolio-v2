@@ -49,13 +49,13 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <ul className="project">
         <h2 className="title">
           <span className="span-icon">
             <PiFolderSimple />
           </span>
           Projects
         </h2>
+      <ul className="project">
         {project.map((item, id) => (
           <ProjectItems items={item} key={id} />
         ))}

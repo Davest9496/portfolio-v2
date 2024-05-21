@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./styles.css";
 import { Info } from "./components/Info";
-import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
@@ -39,22 +38,13 @@ function App() {
 
   return (
     <div className="container">
-      <div className="container-left">
-        <Info />
-      </div>
-      <div className="container-right">
-        <div className="mask">
-          <Nav />
-        </div>
-        <div className="container-box">
-          <Hero />
-          <About />
-          <Projects />
-          <Certifications />
-          <Contact />
-          <Footer />
-        </div>
-      </div>
+      <Info />
+      <Hero />
+      <About />
+      <Projects />
+      <Certifications />
+      <Contact />
+      <Footer />
     </div>
   );
 }

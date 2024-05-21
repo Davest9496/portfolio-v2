@@ -1,4 +1,3 @@
-import { MdArrowOutward } from "react-icons/md";
 import { AiOutlineUser } from "react-icons/ai";
 
 export function About() {
@@ -26,13 +25,10 @@ export function About() {
         exciting technology trends, studying online to develop or acquire more
         skills, or spending time with family.
       </p>
-      <a
-        href="/resume.pdf"
-        className="text-highlight"
-        aria-label="View my resume"
-      >
-        View my resume <MdArrowOutward />
-      </a>
+      <div className="action-call">
+        <button className="cta-contact">Contact Me</button>
+        <button className="cta-cv">Download CV</button>
+      </div>
     </section>
   );
 }

@@ -1,36 +1,47 @@
 import { Link } from "react-scroll";
-import { RiHome2Line } from "react-icons/ri";
-import { AiOutlineUser } from "react-icons/ai";
-import { RiContactsBookLine } from "react-icons/ri";
-import { PiStudent, PiFolderSimple } from "react-icons/pi";
+import { MdContactMail } from "react-icons/md";
+import { FaUserGraduate, FaFolder, FaUser, FaHome } from "react-icons/fa";
 
 export function Nav() {
   return (
-    <nav className="nav">
+    <nav id="nav">
       <ul className="nav-container">
         {/* HOME */}
-        <Link to="home" spy={true} smooth={true} offset={-100} duration={500}>
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          activeClass="active-link"
+        >
           <li className="nav-item">
             <span className="links">
-              <RiHome2Line />
+              <FaHome />
             </span>
             <span className="links-text">
-              <a href="##">Home</a>
+              Home
             </span>
           </li>
         </Link>
         {/* ABOUT */}
-        <Link to="about" spy={true} smooth={true} offset={-100} duration={500}>
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          activeClass="active-link"
+        >
           <li className="nav-item">
             <span className="links">
-              <AiOutlineUser />
+              <FaUser />
             </span>
             <span className="links-text">
-              <a href="##">About</a>
+             About
             </span>
           </li>
         </Link>
-
         {/* PROJECTS */}
         <Link
           to="projects"
@@ -38,30 +49,32 @@ export function Nav() {
           smooth={true}
           offset={-150}
           duration={500}
+          activeClass="active-link"
         >
           <li className="nav-item">
             <span className="links">
-              <PiFolderSimple />
+              <FaFolder />
             </span>
             <span className="links-text">
-              <a href="##">Projects</a>
+              Projects
             </span>
           </li>
         </Link>
         {/* EDUCATION */}
         <Link
-          to="certifications"
+          to="education"
           spy={true}
           smooth={true}
           offset={-150}
           duration={500}
+          activeClass="active-link"
         >
           <li className="nav-item">
             <span className="links">
-              <PiStudent />
+              <FaUserGraduate />
             </span>
             <span className="links-text">
-              <a href="##">Certifications</a>
+              Certifications
             </span>
           </li>
         </Link>
@@ -72,13 +85,14 @@ export function Nav() {
           smooth={true}
           offset={-200}
           duration={500}
+          activeClass="active-link"
         >
           <li className="nav-item">
             <span className="links">
-              <RiContactsBookLine />
+              <MdContactMail />
             </span>
             <span className="links-text">
-              <a href="##">Contact Me</a>
+              Contact
             </span>
           </li>
         </Link>
@@ -86,16 +100,3 @@ export function Nav() {
     </nav>
   );
 }
-
-// export function NavItem({ children }) {
-//   return (
-//     <li className="nav-item">
-//       {/* <span className="links">
-//         <BsHouse />
-//       </span> */}
-//       <span className="links-text">
-//         <a href="##">{children}</a>
-//       </span>
-//     </li>
-//   );
-// }

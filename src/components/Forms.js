@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 export default function Forms() {
   const [formState, setFormState] = useState({
@@ -11,10 +12,21 @@ export default function Forms() {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Implement form submission logic here
-    alert("Form submitted successfully!");
+
+    try {
+      await emailjs.sendForm(
+        "default_service",
+        "YOUR_TEMPLATE_ID",
+        formState,
+        "YOUR_USER_ID"
+      );
+      alert("Form submitted successfully!");
+    } catch (err) {
+      console.error(err);
+      alert("Failed to submit the form.");
+    }
   };
 
   return (
