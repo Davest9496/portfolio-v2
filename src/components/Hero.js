@@ -10,7 +10,7 @@ export function Hero() {
         <span className="span-icon">
           <RiHome2Line />
         </span>
-        welcome
+        welcome!
       </h2>
       <div className="hero-text">
         <h2 className="hero-subHeading grey">dave ejezie</h2>
@@ -29,5 +29,3 @@ export function Hero() {
     </div>
   );
 }
-
-// export default Hero
