@@ -558,7 +558,7 @@ footer {
   }
 
   .links-text{
-    opacity: 0;
+    display: none;
   }
 
   .hero {
