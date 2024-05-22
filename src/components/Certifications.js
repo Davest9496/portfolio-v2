@@ -12,13 +12,13 @@ export function Certifications() {
       </h2>
       <div className="eduHistory">
         <h1>To be updated shortly...</h1>
-        <div>
+        {/* <div>
           <h3>course 1</h3>
           <p>details here</p>
           <hr/>
           <h3>course 1</h3>
           <p>details here</p>
-        </div>
+        </div> */}
        
       </div>
       <h3 className="text-highlight">
