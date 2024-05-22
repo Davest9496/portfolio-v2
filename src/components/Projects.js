@@ -1,7 +1,7 @@
 import React from "react";
 import { ToolsItem } from "./ToolsItem";
 import { FaLink } from "react-icons/fa";
-import { MdArrowOutward } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa";
 import { PiFolderSimple } from "react-icons/pi";
 
 const Projects = () => {
@@ -16,18 +16,16 @@ const Projects = () => {
           alt="8 Days Weather Forecast"
         />
       ),
+      link: `https://cravings.vercel.app`,
       tools: ["Python", "Flask", "JavaScript", "CSS"],
     },
     {
       title: "Mean Cal",
       info: `about the meaan calculator app...`,
       image: (
-        <img
-          src="/mean.png"
-          className="image"
-          alt="8 Days Weather Forecast"
-        />
+        <img src="/mean.png" className="image" alt="8 Days Weather Forecast" />
       ),
+      link: `https://cravings.vercel.app`,
       tools: ["Python", "Flask", "JavaScript", "CSS"],
     },
     {
@@ -40,32 +38,40 @@ const Projects = () => {
           alt="Cravings Restaurant Website"
         />
       ),
+      link: `https://cravings.vercel.app`,
       tools: ["HTML", "SASS"],
     },
   ];
 
   return (
     <section id="projects">
-        <h2 className="title">
-          <span className="span-icon">
-            <PiFolderSimple />
-          </span>
-          Projects
-        </h2>
+      <h2 className="title">
+        <span className="span-icon">
+          <PiFolderSimple />
+        </span>
+        Projects
+      </h2>
       <ul className="project">
         {project.map((item, id) => (
           <ProjectItems items={item} key={id} />
         ))}
       </ul>
-        <h3 className="text-highlight">
-          View project archive <MdArrowOutward />
-        </h3>
+      <h3 className="text-highlight">
+        View project archive{" "}
+        <a
+          href="https://github.com/Davest9496?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaArrowRight className="arrowRight" />
+        </a>
+      </h3>
     </section>
   );
 };
 
 const ProjectItems = React.memo(function ProjectItems({ items }) {
-  const { title, info, image, tools } = items;
+  const { title, info,link, image, tools } = items;
 
   return (
     <li className="project-box">
@@ -75,8 +81,10 @@ const ProjectItems = React.memo(function ProjectItems({ items }) {
       <div className="project-info">
         <h3 className="project-title">
           {title}
-          <span className="title-icon">
-            <FaLink />
+          <span>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <FaLink className="title-icon" />
+            </a>
           </span>
         </h3>
         <p className="project-info">{info}</p>
@@ -91,3 +99,4 @@ const ProjectItems = React.memo(function ProjectItems({ items }) {
 });
 
 export { Projects };
+// https://cravings.vercel.app

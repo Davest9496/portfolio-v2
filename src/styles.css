@@ -121,6 +121,7 @@ a {
   color: #555;
 }
 
+
 /* Nav Links*/
 .nav-container {
   display: flex;
@@ -211,10 +212,55 @@ a {
   margin-bottom: 30px;
 }
 
+@keyframes changeColors {
+  0% {
+    color: #555;
+  }
+  25% {
+    color: #0ec9ad;
+  }
+  50% {
+    color: #F0ECE5;
+  }
+  75%{
+    color: orangered;
+  }
+  100% {
+    color: #555;
+  }
+}
+
+.hero-heading {
+  animation: changeColors 5s linear infinite;
+}
+
 .hero-icon {
-  color: #0ec9ad;
+  color: #555;
   margin-left: 30px;
-  font-size: 0.8em;
+  font-size: 0.5em;
+}
+
+.hero-icon2 {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+  color: #0ec9ad;
+}
+
+@keyframes moveDownUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero-icon2 {
+  animation: moveDownUp 1s ease-in-out infinite;
 }
 
 .grey {
@@ -314,11 +360,14 @@ figure {
 .title-icon {
   font-size: 0.7em;
   margin-left: 5px;
+  color: #0ec9ad;
   cursor: pointer;
 }
 
 .title-icon:hover {
-  color: #0ec9ad;
+  scale: 1.2;
+  transform: translateX(5px);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Project Technologies */
@@ -343,8 +392,9 @@ figure {
   padding: 0 15% 10%;
 }
 
-.education {
-  height: 600px;
+.eduHistory {
+  padding: 0 10%;
+  background-color: yellow;
 }
 
 /* Contact */
@@ -477,11 +527,10 @@ footer {
 .text-highlight {
   font-weight: 300;
   margin-bottom: 5px;
-  color: rgb(14, 201, 173);
+  display: inline-block;
 }
 
 .text-highlight:hover {
-  color: rgb(14, 201, 173);
   cursor: pointer;
 }
 
@@ -492,6 +541,26 @@ footer {
 .text-highlight:hover .text-icon {
   color: #fff;
   transform: translateX(100px);
+}
+
+.arrowRight {
+  color: rgb(14, 201, 173);
+}
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.text-highlight:hover .arrowRight {
+  animation: moveRightLeft 1s ease-in-out infinite;
 }
 
 /* MEDIA QUERY MANAGER */

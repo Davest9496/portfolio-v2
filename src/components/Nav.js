@@ -73,7 +73,7 @@ export function Nav() {
             <span className="links">
               <FaUserGraduate />
             </span>
-            <span className="links-text">Certifications</span>
+            <span className="links-text">Qualification</span>
           </li>
         </Link>
         {/* CONTACT */}

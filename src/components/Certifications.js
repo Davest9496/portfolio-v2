@@ -1,24 +1,34 @@
-import { MdArrowOutward } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa";
 import { PiStudent } from "react-icons/pi";
 
 export function Certifications() {
   return (
-    <div id="education" className="education">
+    <div id="education">
       <h2 className="title">
         <span className="span-icon">
           <PiStudent />
         </span>
-        Education
+        Qualification
       </h2>
-      <p>
-        I currently studying AI Programming with Python at New City College,
-        London, where I focus Deep Learning and AI development.
-      </p>
+      <div className="eduHistory">
+        <div>
+          <h3>course 1</h3>
+          <p>details here</p>
+          <hr/>
+          <h3>course 1</h3>
+          <p>details here</p>
+        </div>
+       
+      </div>
       <h3 className="text-highlight">
-        View certification details{" "}
-        <span className="text-icon">
-          <MdArrowOutward />
-        </span>
+        View Certifications{" "}
+        <a
+          href="https://www.credly.com/users/dave-ejezie/badges#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaArrowRight className="arrowRight" />
+        </a>
       </h3>
     </div>
   );

@@ -10,20 +10,18 @@ export function About() {
         About Me
       </h2>
       <p>
-        I am a tech enthusiast with skills in web development and data
-        analytics.
-      </p>
-      <p>
-        My journey in computer programming started with an online course in
-        UI/UX where i came in contact with basics of HTML and CSS, and I have
-        since expanded my programming skills to include Python, SQL, JavaScript,
-        React, and more. I am always eager to learn new technologies and improve
-        my craft.
-      </p>
-      <p>
-        When I'm not coding, you can find me reading about the latest and
-        exciting technology trends, studying online to develop or acquire more
-        skills, or spending time with family.
+        Self-motivated individual with a strong foundation in computer science
+        principles, driven to apply my skills and knowledge in a professional
+        setting and gain real-world experience with web development
+        technologies. Seeking an entry-level role where I can leverage my
+        technical skills, problem-solving abilities, collaborative spirit, and
+        dedication to drive successful project outcomes under the guidance of
+        experienced colleagues.<br/> <br/> Proficient in programming languages including
+        JavaScript, React, SCSS, Python, and Flask. I have applied these skills
+        in academic and personal projects, such as developing my portfolio
+        website. Committed to life-long learning, I continuously seek to broaden
+        my understanding of software development methodologies and best
+        practices.
       </p>
       <div className="action-call">
         <button className="cta-contact">Contact Me</button>
