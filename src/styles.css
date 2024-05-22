@@ -231,7 +231,7 @@ a {
 }
 
 .hero-heading {
-  animation: changeColors 5s linear infinite;
+  animation: changeColors 10s linear infinite;
 }
 
 .hero-icon {

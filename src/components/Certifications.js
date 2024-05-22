@@ -20,7 +20,8 @@ export function Certifications() {
         </div>
        
       </div>
-      <h3 className="text-highlight">
+      <h1>To be updated shortly...</h1>
+      {/* <h3 className="text-highlight">
         View Certifications{" "}
         <a
           href="https://www.credly.com/users/dave-ejezie/badges#"
@@ -29,7 +30,7 @@ export function Certifications() {
         >
           <FaArrowRight className="arrowRight" />
         </a>
-      </h3>
+      </h3> */}
     </div>
   );
 }
