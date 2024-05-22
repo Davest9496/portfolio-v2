@@ -393,8 +393,9 @@ figure {
 }
 
 .eduHistory {
+  height: 600px;
   padding: 0 10%;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 /* Contact */
