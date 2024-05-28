@@ -8,7 +8,7 @@ const Projects = () => {
   const project = [
     {
       title: "Weather App",
-      info: `about the weather app...`,
+      info: `In today's fast-paced world, staying ahead of the weather is more than just a convenience—it's a necessity. The Weather App, designed to provide an 8-day forecast, is your go-to companion for planning your week with confidence. Built with precision and user-friendliness in mind, this application leverages modern web technologies to deliver accurate and timely weather predictions right at your fingertips.`,
       image: (
         <img
           src="/weather.png"
@@ -16,21 +16,21 @@ const Projects = () => {
           alt="8 Days Weather Forecast"
         />
       ),
-      link: `https://cravings.vercel.app`,
+      link: `https://github.com/Davest9496/weather-app.git`,
       tools: ["Python", "Flask", "JavaScript", "CSS"],
     },
     {
       title: "Mean Cal",
-      info: `about the meaan calculator app...`,
+      info: `The Mean Calculator is designed to serve as a practical tool for anyone needing to quickly calculate averages without delving into cumbersome spreadsheets or calculators. Whether you're a student, teacher, researcher, or simply someone who needs to perform basic statistical analysis, this application offers a user-friendly interface that makes the process effortless.`,
       image: (
         <img src="/mean.png" className="image" alt="8 Days Weather Forecast" />
       ),
-      link: `https://cravings.vercel.app`,
+      link: `https://github.com/Davest9496/mean_calculator.git`,
       tools: ["Python", "Flask", "JavaScript", "CSS"],
     },
     {
       title: "Cravings",
-      info: `Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident,`,
+      info: `Cravings is a restaurant website that elegantly combines HTML and SASS to offer a seamless and visually appealing online presence. Designed to reflect the upscale ambiance of the restaurant, the site provides a comprehensive view of the menu. Its minimalist design, enhanced by warm colors and high-quality images, ensures a luxurious browsing experience across all devices. The use of SASS for styling allows for efficient maintenance and scalability, while HTML structures the content for optimal usability and SEO. Cravings exemplifies how simplicity and sophistication can harmonize in web development, creating an engaging platform that mirrors the restaurant's commitment to quality and innovation.`,
       image: (
         <img
           src="/cravings.png"
